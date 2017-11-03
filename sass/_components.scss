@@ -203,7 +203,6 @@
     &__photo {
         width: 100%;
         display: block;
-
     }
 }
 
@@ -226,7 +225,6 @@
     &__stars {
         margin-right: auto;
         display: flex;
-
     }
 
     &__icon-star,
@@ -270,7 +268,6 @@
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
-
     }
 }
 
@@ -305,7 +302,6 @@
     &:focus {
         outline: none;
         animation: pulsate 1s infinite;
-
     }
 }
 
@@ -368,7 +364,6 @@
         mask-image: url(../img/chevron-thin-right.svg);
         -webkit-mask-size: cover;
         mask-size: cover;
-
     }
 }
 
@@ -464,3 +459,71 @@
     }
 }
 
+
+//////////////////////////////////////////////////////////////////
+/// CTA
+
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__book-now {        
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;        
+
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////
+/// CTA BUTTON
+
+.btn {
+    font-size: 1.5rem;
+    border: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+        padding: 2rem 0;
+        position: absolute;        
+        left: 0;
+        top: -100%;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:hover &__visible  {
+        transform: translateY(100%);
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
